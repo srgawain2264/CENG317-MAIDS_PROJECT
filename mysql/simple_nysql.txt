@@ -1,0 +1,128 @@
+
+Comments in MySQL:
+# comment (single line)
+-- comment (single line)
+/* comment */ (multi-line)
+
+
+Create a user in MySQL::
+CREATE USER
+  'smithj'@'localhost' IDENTIFIED BY 'autumn';
+
+Create Multiple Users:
+CREATE USER
+  'smithj'@'localhost' IDENTIFIED BY 'autumn',
+  'andersonk'@'localhost' IDENTIFIED BY 'summer';
+
+Change User password:
+SET PASSWORD FOR 'smithj'@'localhost' = PASSWORD('autumn');
+
+Drop User:
+DROP USER user_name;
+
+Drop mor ethan one usr at-a-time:
+DROP USER 'smithj'@'localhost', 'andersonk'@'localhost';
+
+Rename User:
+RENAME USER
+  'smithj'@'localhost' TO 'jane'@'localhost';
+
+Find users in MySQL database:
+SELECT User FROM mysql.user;
+
+
+Create a table with primary key:
+CREATE TABLE contacts
+( id INT(11) NOT NULL AUTO_INCREMENT,
+  last_name VARCHAR(30) NOT NULL,
+  first_name VARCHAR(25),
+  birthday DATE,
+  CONSTRAINT contacts_pk PRIMARY KEY (id)
+);
+
+Add primary key with ALTER TABLE:
+ALTER TABLE contacts
+  ADD CONSTRAINT contacts_pk 
+    PRIMARY KEY (contact_id);
+
+Change Column Size:
+ALTER TABLE table_name MODIFY column_name datatype(size);
+
+Drop Primary Key:
+ALTER TABLE table_name
+  DROP PRIMARY KEY;
+
+Add a column:
+ALTER TABLE table_name ADD column_name datatype(size) ALTER TABLE table_name MODIFY column_name datatype(size) [NULL|NOT NULL] [ FIRST | AFTER column_name ];
+
+Add Multiple Columns (3 in this example):
+ALTER TABLE table_name 
+    ADD column_name datatype(size) ALTER TABLE table_name MODIFY column_name datatype(size) [NULL|NOT NULL] [ FIRST | AFTER column_name ],
+    ADD column_name datatype(size) ALTER TABLE table_name MODIFY column_name datatype(size) [NULL|NOT NULL] [ FIRST | AFTER column_name ],
+    ADD column_name datatype(size) ALTER TABLE table_name MODIFY column_name datatype(size) [NULL|NOT NULL] [ FIRST | AFTER column_name ];
+Delete a column: 
+ALTER TABLE table_name 
+  DROP COLUMN column_name;
+
+Rename a column:
+ALTER TABLE table_name
+  CHANGE COLUMN old_name new_name 
+    column_definition
+    [ FIRST | AFTER column_name ];
+
+Rename Table:
+ALTER TABLE table_name
+  RENAME TO new_table_name;
+
+Drop Table:
+DROP TABLE [ IF EXISTS ] table_name1;
+
+Drop Multiple tables:
+DROP TABLE [ IF EXISTS ] table_name1, table_name2;
+
+Add Constraint to table:
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name UNIQUE (column1, column2, ... column_n);
+
+Grant Privileges:
+
+GRANT privileges ON object TO user DEFINED BY 'password';
+
+where user = 'username'@'localhost'
+
+privileges can be any of the following values:
+
+Privilege	Description
+SELECT	Ability to perform SELECT statements on the table.
+INSERT	Ability to perform INSERT statements on the table.
+UPDATE	Ability to perform UPDATE statements on the table.
+DELETE	Ability to perform DELETE statements on the table.
+INDEX	Ability to create an index on an existing table.
+CREATE	Ability to perform CREATE TABLE statements.
+ALTER	Ability to perform ALTER TABLE statements to change the table definition.
+DROP	Ability to perform DROP TABLE statements.
+GRANT OPTION	Allows you to grant the privileges that you possess to other users.
+ALL	Grants all permissions except GRANT OPTION.
+
+
+Revoke Privileges:
+
+REVOKE privileges ON object FROM user;
+
+privileges can be any of the following values:
+
+Privilege	Description
+SELECT	Ability to perform SELECT statements on the table.
+INSERT	Ability to perform INSERT statements on the table.
+UPDATE	Ability to perform UPDATE statements on the table.
+DELETE	Ability to perform DELETE statements on the table.
+INDEX	Ability to create an index on an existing table.
+CREATE	Ability to perform CREATE TABLE statements.
+ALTER	Ability to perform ALTER TABLE statements to change the table definition.
+DROP	Ability to perform DROP TABLE statements.
+GRANT OPTION	Allows you to grant the privileges that you possess to other users.
+ALL	Grants all permissions except GRANT OPTION.
+
+
+Show all grants for a user:
+SHOW GRANTS FOR 'root'@'localhost'
