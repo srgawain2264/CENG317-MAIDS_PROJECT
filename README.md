@@ -114,10 +114,3 @@ PROJECT KEY ACTIVITIES:
 15.	Project demo.
 16.	Individual presentations and the final report due.
 
-PROJECT BLOCK DIAGRAM:
-
- 
-PROJECT SCHEDULE: GANTT CHART
-
- 
-
