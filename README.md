@@ -81,3 +81,43 @@ MAIDS (Meis Intrusion Detection System) real-world project satisfies the followi
 5.	Eliminate monthly monitoring fee (self-monitoring system).
 6.	Provide database information for authorities use.
 7.	No contract required.
+
+PROJECT DETAILS:
+
+1.	Name of Organization: 	Humber College – Computer Engineering Technology
+2.	Project Title: 			MAIDS - CENG317 Project
+3.	Contact Person: 		Claudio F. Meis – N00674230
+4.	Telephone: 			437-230-4874
+5.	Email: 				cfpm@live.ca
+6.	Report Preparation Date: 	October 30, 2019
+7.	Project Start Date: 		September 6, 2019
+8.	Actual Start Date: 		September 6, 2019
+9.	Project End Date: 		October 30, 2019
+10.	Actual End Date: 		October 30, 2019
+
+PROJECT KEY ACTIVITIES:
+
+1.	Project proposal.
+2.	Project schedule, Gantt chart.
+3.	Design the circuit and select the parts.
+4.	Components ordered and ready to build the circuit.
+5.	Design of your PCB board with Fritzing.
+6.	Breadboard test of designed circuit.
+7.	PCB board design.
+8.	Design of the PCB must finish.
+9.	Breadboard version of circuit must function.
+10.	Solder the PCB board starts.
+11.	PCB board testing should be completed.
+12.	Data communication to the embedded CPU board should be set up.
+13.	Enclosure design. 
+14.	Enclosure due and project should be finished and assembled together. 
+15.	Project demo.
+16.	Individual presentations and the final report due.
+
+PROJECT BLOCK DIAGRAM:
+
+ 
+PROJECT SCHEDULE: GANTT CHART
+
+ 
+
